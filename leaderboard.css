@@ -1,0 +1,119 @@
+/* General reset for body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes the full viewport height */
+    flex-direction: column;
+}
+
+/* Nav bar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    width: 100%; /* Ensure the nav bar spans the full width */
+    position: fixed;
+    top: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+div a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* Leaderboard styles */
+.leaderboard {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 100px; /* Adjust for fixed nav bar height */
+    margin: auto; /* Center the leaderboard horizontally */
+}
+
+.leaderboard h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto; /* Center the table inside the leaderboard */
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+.leaderboard th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.leaderboard tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
